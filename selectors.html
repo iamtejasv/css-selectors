@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>selectors</title>
+    <style>
+      /* 1. Universal Selector */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* 2. Type Selector */
+
+      p {
+        font-size: 16px;
+        /* margin: 10px 20px 10px 20px;
+        padding: 1px 2px 3px 4px; */
+        margin-bottom: 20px;
+      }
+
+      /* 3. Class Selector */
+
+      .highlight {
+        background-color: #17e0eb;
+      }
+
+      /* 4. ID Selector */
+
+      #header {
+        background-color: #d83939;
+      }
+
+      /* 5. Attribute Selector */
+
+      input[type="text"] {
+        border: 1px dashed purple;
+      }
+
+      /* 6. Descendant Selector */
+      article p {
+        font-style: italic;
+        background-color: #ffae00;
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+
+      /* 7. Child Selector */
+      div > p {
+        background-color: #c300ff;
+      }
+
+      /* 8. Adjacent Sibling Selector */
+      h1 + p {
+        font-weight: bold;
+      }
+
+      /* 9. General Sibling Selector */
+      h2 ~ p {
+        color: #f2ff00;
+      }
+
+      /* 10. Pseudo-class Selector */
+      a:hover {
+        background-color: #408ee7;
+        text-decoration: none;
+        color: #1a1a1a;
+        padding: 2px;
+        margin: 2px;
+      }
+
+      /* 11. Pseudo-element Selector */
+      p::first-letter {
+        font-weight: bold;
+        font-size: larger;
+      }
+
+      /* 12.Grouping Selector */
+
+      h1,
+      h2,
+      h3 {
+        color: #c53100;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">This is the header</header>
+    <h1>Main Heading</h1>
+    <p>
+      This paragraph is adjacent to h1 and demonstrates the adjacent sibling
+      selector.
+    </p>
+    <p>
+      This paragraph is adjacent to h1 and demonstrates the adjacent sibling
+      selector.
+    </p>
+    <p class="highlight">
+      This paragraph is adjacent to h1 and demonstrates the adjacent sibling
+      selector.
+    </p>
+    <input type="text" placeholder="Enter text here" />
+    <article>
+      <p>
+        This paragraph is inside an article, showing the descendant selector.
+      </p>
+    </article>
+
+    <div>
+      <p>I am a child</p>
+      <p>I am a child</p>
+      <section>
+        <p>I am a Descendant</p>
+      </section>
+      <p>I am a child</p>
+    </div>
+
+    <h2>Sub heading</h2>
+    <p>
+      This is a sibling paragraph to h2, demonstrating the general sibling
+      selector.
+    </p>
+    <div>This is a sibling div to h2.</div>
+    <p>This is another sibling paragraph to h2.</p>
+    <a href="#">Hover over me to see the pseudo-class selector in action</a>
+    <p>
+      This paragraph demonstrates pseudo-element selectors with a styled first
+      line and first letter.
+    </p>
+
+    <h3>Heading 3</h3>
+    <p>
+      The headings h1, h2, and h3 use the grouping selector for consistent font
+      family.
+    </p>
+  </body>
+</html>
